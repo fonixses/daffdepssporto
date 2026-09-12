@@ -367,8 +367,9 @@ body.tema-gelap header {
 }
 
 body.tema-gelap #tombol-tema {
-    border-color: #475569;
-    background-color: #1e293b;
+    border-color: #3b82f6;
+    background-color: #172554;
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
 }
 
 body.tema-gelap .ikon-bulan {

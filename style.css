@@ -376,8 +376,9 @@ body.tema-gelap .ikon-bulan {
     opacity: 1;
 }
 
-body.tema-gelap .ikon-bintang {
-    opacity: 0.45;
+body.tema-gelap .ikon-matahari {
+    opacity: 1;
+    color: #e2cd12;
 }
 
 body.tema-gelap .teks-berjalan {

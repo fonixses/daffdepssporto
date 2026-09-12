@@ -13,6 +13,7 @@ body {
     color: #24303f;
     background-color: #f4f7fb;
     line-height: 1.6;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 .container {
@@ -43,6 +44,10 @@ nav {
     font-weight: bold;
     text-decoration: none;
 }
+li {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
 
 nav ul {
     display: flex;
@@ -58,6 +63,37 @@ nav ul a {
 
 nav ul a:hover {
     color: #ffffff;
+}
+
+#tombol-tema {
+    margin-left: 18px;
+    padding: 5px 9px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border: 1px solid #93c5fd;
+    border-radius: 20px;
+    background-color: #1d4ed8;
+    cursor: pointer;
+}
+
+#tombol-tema span {
+    font-size: 17px;
+    line-height: 1;
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.ikon-bulan {
+    color: #dbeafe;
+    opacity: 0.5;
+}
+
+.ikon-bintang {
+    color: #fde047;
+}
+
+#tombol-tema:hover span {
+    transform: rotate(20deg);
 }
 
 .teks-berjalan {
@@ -258,12 +294,12 @@ nav ul a:hover {
 }
 
 .kontak {
-    color: #cbd5e1;
-    background-color: #0f172a;
+    color: #334155;
+    background-color: #dbeafe;
 }
 
 .kontak .judul-bagian {
-    color: #ffffff;
+    color: #0f172a;
     margin-bottom: 15px;
 }
 
@@ -282,7 +318,7 @@ nav ul a:hover {
 
 .daftar-kontak a {
     color: #ffffff;
-    background-color: #1e293b;
+    background-color: #2563eb;
     border-radius: 7px;
     padding: 13px 18px;
     text-decoration: none;
@@ -293,11 +329,108 @@ nav ul a:hover {
 }
 
 footer {
-    color: #94a3b8;
-    background-color: #020617;
+    color: #475569;
+    background-color: #e2e8f0;
     text-align: center;
     padding: 22px;
     font-size: 14px;
+}
+
+header,
+#tombol-tema,
+.teks-berjalan,
+.latar-putih,
+.kartu-keahlian,
+.kartu-proyek,
+.kontak,
+.daftar-kontak a,
+footer,
+.hero h1,
+.hero h2,
+.judul-bagian,
+.kartu-keahlian h3,
+.isi-proyek h3,
+.isi-proyek span,
+.foto-profil {
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
+}
+
+body.tema-gelap {
+    color: #cbd5e1;
+    background-color: #0f172a;
+}
+
+body.tema-gelap header {
+    background-color: #0b1120;
+    border-bottom-color: #1e40af;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+}
+
+body.tema-gelap #tombol-tema {
+    border-color: #475569;
+    background-color: #1e293b;
+}
+
+body.tema-gelap .ikon-bulan {
+    color: #bfdbfe;
+    opacity: 1;
+}
+
+body.tema-gelap .ikon-bintang {
+    opacity: 0.45;
+}
+
+body.tema-gelap .teks-berjalan {
+    border-color: #3b82f6;
+    background-color: #020617;
+}
+
+body.tema-gelap .hero h1,
+body.tema-gelap .judul-bagian,
+body.tema-gelap .kartu-keahlian h3,
+body.tema-gelap .isi-proyek h3 {
+    color: #f8fafc;
+}
+
+body.tema-gelap .hero h2 {
+    color: #94a3b8;
+}
+
+body.tema-gelap .latar-putih {
+    background-color: #111827;
+}
+
+body.tema-gelap .kartu-keahlian,
+body.tema-gelap .kartu-proyek {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.tema-gelap .isi-proyek span {
+    color: #93c5fd;
+    background-color: #172554;
+}
+
+body.tema-gelap .foto-profil {
+    border-color: #1e40af;
+}
+
+body.tema-gelap .kontak {
+    color: #cbd5e1;
+    background-color: #020617;
+}
+
+body.tema-gelap .kontak .judul-bagian {
+    color: #ffffff;
+}
+
+body.tema-gelap .daftar-kontak a {
+    background-color: #1e293b;
+}
+
+body.tema-gelap footer {
+    color: #94a3b8;
+    background-color: #00040d;
 }
 
 @media (max-width: 750px) {
@@ -315,6 +448,10 @@ footer {
         gap: 13px;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    #tombol-tema {
+        margin-left: 0;
     }
 
     .hero {

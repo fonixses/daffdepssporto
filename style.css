@@ -262,6 +262,12 @@ nav ul a:focus-visible,
     border-radius: 10px;
 }
 
+.kartu-keahlian:hover,
+.kartu-proyek:hover {
+    transform: scale(0.97);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+}
+
 .kartu-keahlian {
     padding: 28px;
 }
@@ -374,6 +380,11 @@ footer,
 .isi-proyek span,
 .foto-profil {
     transition: background-color 0.4s, color 0.4s, border-color 0.4s, box-shadow 0.4s;
+}
+
+.kartu-keahlian,
+.kartu-proyek {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s, border-color 0.4s;
 }
 
 body.tema-gelap {

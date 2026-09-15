@@ -23,77 +23,99 @@ body {
 }
 
 header {
-    background-color: #2563eb;
-    border-bottom: 1px solid #60a5fa;
-    box-shadow: 0 3px 14px rgba(37, 99, 235, 0.28);
     position: sticky;
     top: 0;
-    z-index: 10;
+    padding-top: 8px;
+    margin-bottom: 8px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+header nav.container {
+    width: fit-content;
+    max-width: calc(100% - 32px);
 }
 
 nav {
-    min-height: 70px;
+    min-height: 40px;
+    padding: 0 8px 0 12px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-}
-
-.logo {
-    color: #ffffff;
-    font-size: 22px;
-    font-weight: bold;
-    text-decoration: none;
-}
-li {
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+    justify-content: center;
+    gap: 10px;
+    background-color: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    pointer-events: auto;
 }
 
 nav ul {
     display: flex;
-    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(12px, 1.5vw, 22px);
     list-style: none;
 }
 
 nav ul a {
-    color: #dbeafe;
+    position: relative;
+    display: block;
+    padding: 4px 0;
+    color: #64748b;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.25s ease;
 }
 
-nav ul a:hover {
-    color: #ffffff;
+nav ul a:hover,
+nav ul a:focus-visible {
+    color: #2563eb;
+}
+
+nav ul a:focus-visible,
+#tombol-tema:focus-visible {
+    outline: 3px solid rgba(37, 99, 235, 0.28);
+    outline-offset: 4px;
 }
 
 #tombol-tema {
-    margin-left: 18px;
-    padding: 5px 9px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    border: 1px solid #93c5fd;
-    border-radius: 20px;
-    background-color: #1d4ed8;
+    width: 28px;
+    height: 28px;
+    flex: 0 0 28px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    color: #475569;
+    background-color: transparent;
     cursor: pointer;
+    transition: color 0.25s ease, background-color 0.25s ease, transform 0.25s ease;
 }
 
 #tombol-tema span {
-    font-size: 17px;
+    grid-area: 1 / 1;
+    font-size: 18px;
     line-height: 1;
-    transition: opacity 0.4s, transform 0.4s;
+    transition: opacity 0.25s ease, transform 0.35s ease;
 }
 
 .ikon-bulan {
-    color: #dbeafe;
-    opacity: 0.5;
+    opacity: 1;
 }
 
-.ikon-bintang {
-    color: #fde047;
+.ikon-matahari {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.65);
 }
 
-#tombol-tema:hover span {
-    transform: rotate(20deg);
+#tombol-tema:hover {
+    color: #2563eb;
+    background-color: #eff6ff;
+    transform: translateY(-1px);
 }
 
 .teks-berjalan {
@@ -336,8 +358,7 @@ footer {
     font-size: 14px;
 }
 
-header,
-#tombol-tema,
+nav,
 .teks-berjalan,
 .latar-putih,
 .kartu-keahlian,
@@ -361,25 +382,42 @@ body.tema-gelap {
 }
 
 body.tema-gelap header {
-    background-color: #0b1120;
-    border-bottom-color: #1e40af;
-    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.4);
+    background-color: transparent;
+}
+
+body.tema-gelap nav {
+    background-color: rgba(15, 23, 42, 0.84);
+    border-color: rgba(71, 85, 105, 0.55);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+}
+
+body.tema-gelap nav ul a {
+    color: #cbd5e1;
+}
+
+body.tema-gelap nav ul a:hover,
+body.tema-gelap nav ul a:focus-visible {
+    color: #60a5fa;
 }
 
 body.tema-gelap #tombol-tema {
-    border-color: #3b82f6;
-    background-color: #172554;
-    box-shadow: 0 0 6px rgba(59, 130, 246, 0.5);
+    color: #facc15;
+    background-color: transparent;
+}
+
+body.tema-gelap #tombol-tema:hover {
+    color: #fde047;
+    background-color: rgba(30, 64, 175, 0.28);
 }
 
 body.tema-gelap .ikon-bulan {
-    color: #bfdbfe;
-    opacity: 1;
+    opacity: 0;
+    transform: rotate(90deg) scale(0.65);
 }
 
 body.tema-gelap .ikon-matahari {
     opacity: 1;
-    color: #e2cd12;
+    transform: rotate(0) scale(1);
 }
 
 body.tema-gelap .teks-berjalan {
@@ -440,20 +478,48 @@ body.tema-gelap footer {
         width: 90%;
     }
 
+    header {
+        padding-top: 6px;
+        margin-bottom: 6px;
+    }
+
+    header nav.container {
+        width: fit-content;
+        max-width: calc(100% - 24px);
+    }
+
     nav {
-        padding: 18px 0;
-        flex-direction: column;
-        gap: 12px;
+        min-height: 38px;
+        padding: 0 6px 0 8px;
+        display: flex;
+        gap: 6px;
+        border-radius: 14px;
     }
 
     nav ul {
-        gap: 13px;
-        flex-wrap: wrap;
-        justify-content: center;
+        min-width: 0;
+        flex: 1;
+        width: 100%;
+        justify-content: space-between;
+        gap: 8px;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+
+    nav ul::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav ul a {
+        padding: 3px 0;
+        font-size: 12px;
+        white-space: nowrap;
     }
 
     #tombol-tema {
-        margin-left: 0;
+        width: 26px;
+        height: 26px;
+        flex-basis: 26px;
     }
 
     .hero {

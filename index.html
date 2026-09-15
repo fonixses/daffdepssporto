@@ -8,18 +8,17 @@
 </head>
 <body>
     <header>
-        <nav class="container">
-            <a href="#beranda" class="logo">DaffaPortofolio.</a>
-            <ul>
+        <nav class="container" aria-label="Navigasi utama">
+            <ul class="menu-navigasi">
                 <li><a href="#beranda">Beranda</a></li>
                 <li><a href="#tentang">Tentang</a></li>
-                <li><a href="#keahlian">Keahlian</a></li>
                 <li><a href="#proyek">Proyek</a></li>
+                <li><a href="#keahlian">Keahlian</a></li>
                 <li><a href="#kontak">Kontak</a></li>
             </ul>
-            <button id="tombol-tema" type="button" title="Ganti tema">
-                <span class="ikon-bulan">⏾</span>
-                <span class="ikon-matahari">☀︎</span>
+            <button id="tombol-tema" type="button" title="Aktifkan tema gelap" aria-label="Aktifkan tema gelap" aria-pressed="false">
+                <span class="ikon-bulan" aria-hidden="true">☾</span>
+                <span class="ikon-matahari" aria-hidden="true">☀</span>
             </button>
         </nav>
     </header>
@@ -37,11 +36,11 @@
                 <div class="hero-text">
                     <p class="sapaan">Halo, saya</p>
                     <h1>Daffa Ganteng</h1>
-                    <h2>Pelajar yang sedang belajar web dan gello dah</h2>
+                    <h2>Pelajar yang sedang belajar web dan pusing dah</h2>
                     <p>Saya suka mempelajari hal baru, terutama cara membuat tampilan website yang sederhana dan nyaman dilihat.</p>
                     <a href="#proyek" class="tombol">Lihat Proyek</a>
                 </div>
-                <img src="foto-profil.jpeg" alt="Foto profil saya" class="foto-profil">
+                <img src="img/foto-profil.jpeg" alt="Foto profil saya" class="foto-profil">
             </div>
         </section>
 
@@ -83,15 +82,15 @@
                 <h2 class="judul-bagian">Beberapa latihan saya</h2>
                 <div class="daftar-proyek">
                     <article class="kartu-proyek">
-                        <img src="proyek-pentest.jpeg" alt="Proyek penetration testing" class="gambar-proyek proyek-satu">
+                        <img src="img/proyek-pentest.jpeg" alt="Proyek penetration testing" class="gambar-proyek proyek-satu">
                         <div class="isi-proyek">
                             <h3>Penetration Testing</h3>
                             <p>Simulasi pengujian keamanan sistem menggunakan Linux dan Metasploitable di lingkungan virtual.</p>
-                            <span>Pentest &amp; Linux</span>
+                            <span>Pentest &amp; Kali Linux</span>
                         </div>
                     </article>
                     <article class="kartu-proyek">
-                        <img src="proyek-chatbot-telegram.jpeg" alt="Proyek chatbot Telegram" class="gambar-proyek proyek-dua">
+                        <img src="img/proyek-chatbot-telegram.jpeg" alt="Proyek chatbot Telegram" class="gambar-proyek proyek-dua">
                         <div class="isi-proyek">
                             <h3>Chatbot Pengingat Stok</h3>
                             <p>Bot Telegram untuk mengecek dan mengirim pengingat stok barang menggunakan script dan data Excel.</p>
@@ -99,7 +98,7 @@
                         </div>
                     </article>
                     <article class="kartu-proyek">
-                        <img src="proyek-landing-page.jpeg" alt="Tampilan proyek landing page" class="gambar-proyek proyek-tiga">
+                        <img src="img/proyek-landing-page.jpeg" alt="Tampilan proyek landing page" class="gambar-proyek proyek-tiga">
                         <div class="isi-proyek">
                             <h3>Landing Page</h3>
                             <p>Landing page toko online dengan tampilan modern untuk menampilkan produk dan kategori belanja.</p>
